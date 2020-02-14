@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 });
 
@@ -41,7 +41,7 @@ app.post("/", function(req, res) {
     headers: {
       "Authorization": "Joseph1 9910009758026a3351c164b6e88aa762 - us4"
     },
-    // body: jsonData
+    body: jsonData
   };
 
   request(options, function(error, response, body) {
